@@ -1,10 +1,10 @@
 package november21.fieldsconstantsandstatic.task3;
 
-public class PrimeNumbers {
+public class PrimeNumber {
 
-    private final int[] primeNumbers = new int[10];
+    private final int[] primeNumbers = new int[10]; // Замечание. Вообще должен быть класс-хранилище.
 
-    PrimeNumbers() {
+    PrimeNumber() {
         findPrimeNumbers();
     }
 
@@ -18,21 +18,6 @@ public class PrimeNumbers {
                 primeNumbers[i] = findNextPrimeNumber(number, primeNumbers, i);
             }
         }
-    }
-
-    public void printNPrimeNumbers(int n) {
-        //Доработать механизм увеличения размера массива к n
-        if (n < 1 || n > 10) {
-            System.out.println("N должно быть 10 >= N >= 1");
-        } else {
-            for (int i = 0; i <= n - 1; i++) {
-                System.out.println(primeNumbers[i]);
-            }
-        }
-    }
-
-    public void printSum() {
-        System.out.println("Sum = " + sum(primeNumbers));
     }
 
     //    В данном случае, рекурсивно реализован вызов проверки для нового числа в рамках
@@ -64,15 +49,7 @@ public class PrimeNumbers {
         return isPrime;
     }
 
-    //    Логика реализации удобного метода-обертки, по аналогии с предыдущей задачей
-    private int sum(int[] numbers) {
-        return sum(numbers, 0);
-    }
-
-    private int sum(int[] numbers, int i) {
-        if (i == numbers.length - 1) {
-            return numbers[i];
-        }
-        return numbers[i] + sum(numbers, i + 1);
+    public int[] getPrimeNumbers() {
+        return primeNumbers;
     }
 }

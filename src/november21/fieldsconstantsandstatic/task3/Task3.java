@@ -24,6 +24,36 @@ public class Task3 {
 
         Scanner scanner = new Scanner(System.in);
 
-        new PrimeNumbers().printNPrimeNumbers(scanner.nextInt());
+        PrimeNumber primeNumber = new PrimeNumber();
+        
+        printNPrimeNumbers(scanner.nextInt(), primeNumber.getPrimeNumbers());
+
+        printSum(primeNumber.getPrimeNumbers());
+    }
+
+    public static void printNPrimeNumbers(int n, int[] primeNumbers) { // Замечание. Принт не ответственность класса PrimeNumber, выносим его сюда.
+        //Доработать механизм увеличения размера массива к n
+        if (n < 1 || n > 10) {
+            System.out.println("N должно быть 10 >= N >= 1");
+        } else {
+            for (int i = 0; i <= n - 1; i++) {
+                System.out.println(primeNumbers[i]);
+            }
+        }
+    }
+
+    public static void printSum(int[] primeNumbers) {
+        System.out.println("Sum = " + sum(primeNumbers));
+    }
+
+    private static int sum(int[] numbers) {
+        return sum(numbers, 0);
+    }
+
+    private static int sum(int[] numbers, int i) {
+        if (i == numbers.length - 1) {
+            return numbers[i];
+        }
+        return numbers[i] + sum(numbers, i + 1);
     }
 }
