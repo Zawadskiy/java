@@ -1,5 +1,8 @@
 package com.walking.counterAggregation;
 
+import com.walking.counterAggregation.counter.Counter;
+import com.walking.counterAggregation.service.CounterService;
+
 public class Main {
     public static void main(String[] args) {
         Counter counter1 = new Counter("Газ", "m^3");

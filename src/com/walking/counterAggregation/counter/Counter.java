@@ -1,4 +1,4 @@
-package com.walking.counterAggregation;
+package com.walking.counterAggregation.counter;
 
 public class Counter {
     private final String name;
@@ -8,6 +8,12 @@ public class Counter {
     public Counter(String name, String unit) {
         this.unit = unit;
         this.name = name;
+    }
+
+    public Counter(String name, String unit, int counter) {
+        this.unit = unit;
+        this.name = name;
+        this.counter = counter;
     }
 
     public int getCounter() {

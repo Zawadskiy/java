@@ -1,5 +1,7 @@
-package com.walking.counterAggregation;
+package com.walking.counterAggregation.service;
 
+
+import com.walking.counterAggregation.counter.Counter;
 
 public class CounterService {
 
@@ -15,7 +17,9 @@ public class CounterService {
 
     public Counter getCounterByName(String name) {
         for (Counter counter : counters) {
-            if (counter.getName().equals(name)) return counter;
+            if (counter.getName().equals(name)) {
+                return counter;
+            }
         }
         System.out.println("Счетчик с таким именем не найден");// Кидаем ексепшен.
         return null;
