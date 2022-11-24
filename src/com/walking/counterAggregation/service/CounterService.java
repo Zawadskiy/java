@@ -7,7 +7,7 @@ public class CounterService {
 
     private final Counter[] counters;
 
-    CounterService(Counter... counters) {
+    public CounterService(Counter... counters) {
         this.counters = counters;
     }
 
