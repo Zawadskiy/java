@@ -15,8 +15,8 @@ public class Main {
         Animal[] animals = {cat1, dog1, cow1};
 
         whatDouseTheFoxSay(animals);
-
     }
+
     static void whatDouseTheFoxSay(Animal[] animals) {
         for (Animal animal : animals) {
             animal.sound();
