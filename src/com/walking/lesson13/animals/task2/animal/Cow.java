@@ -6,7 +6,7 @@ public class Cow extends Animal {
 	public static String ANIMAL_COW = "cow";
 	
 	public Cow() {
-		super("cow");
+		super(ANIMAL_COW);
 	}
 	
 	public void moo() {

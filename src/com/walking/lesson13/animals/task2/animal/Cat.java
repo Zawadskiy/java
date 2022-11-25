@@ -6,7 +6,7 @@ public class Cat extends Animal {
 	public static String ANIMAL_CAT = "cat";
 	
 	public Cat() {
-		super("cat");
+		super(ANIMAL_CAT);
 	}
 	
 	public void meow() {

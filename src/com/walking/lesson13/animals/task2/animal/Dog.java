@@ -6,7 +6,7 @@ public class Dog extends Animal {
 	public static String ANIMAL_DOG = "dog";
 	
 	public Dog() {
-		super("dog");
+		super(ANIMAL_DOG);
 	}
 	
 	public void woof() {
